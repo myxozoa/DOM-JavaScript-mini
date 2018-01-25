@@ -50,8 +50,6 @@ class Tabs {
   constructor(element) {
     this.element = element;// attaches the dom node to the object as "this.element"
     this.links = this.element.querySelectorAll('.Tabs__link');
-    this.tab = this.element.querySelectorAll('.Tabs__item');
-    this.activeTab = this.tab[0];
     this.links = Array.from(this.links).map((link) => {
       return new TabLink(link, this);
     });
@@ -62,7 +60,6 @@ class Tabs {
   init() {
     // select the first link and tab upon ititialization
     this.activeLink.select();
-    this.activeTab.select();
 
   }
 
